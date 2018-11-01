@@ -22,7 +22,6 @@ exit();  // 処理終了
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Start your project here-->
   <div style="height: 100vh">
       <div class="flex-center flex-column">
           <form class="border border-light p-5" id="SigninForm" name="SigninForm" action="" method="POST">

@@ -1,6 +1,0 @@
-RDMS：MySQL
-DB名：usermanagement
-テーブル名：useraccount
-DBサーバ：localhost
-ユーザ：admin
-パスワード：hogehoge

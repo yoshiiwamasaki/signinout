@@ -42,7 +42,6 @@ if (isset($_POST["SignIn"])) {
         <title>Sign Out</title>
     </head>
     <body>
-  <!-- Start your project here-->
   <div style="height: 100vh">
       <div class="flex-center flex-column">
           <form class="border border-light p-5" id="SignInForm" name="SignInForm" action="" method="POST">

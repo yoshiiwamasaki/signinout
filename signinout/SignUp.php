@@ -29,14 +29,14 @@ if (isset($_POST["signUp"])) {
         // DBへのアクセス用の値を変数に格納
         $dbs = sprintf('mysql: host=%s; dbname=%s; charset=utf8', $db['host'], $db['dbname']);
 
-        // 3. エラー処理
+        // DB登録処理
         try {
             $pdo = new PDO($dbs, $db['user'], $db['pass'], array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 
             $stmt = $pdo->prepare("INSERT INTO useraccount(email, password) VALUES (?, ?)");
 
             $stmt->execute(array($email, password_hash($password, PASSWORD_DEFAULT)));  // パスワードのハッシュ化を行う
-            $userid = $pdo->lastinsertid();  // 登録した(DB側でauto_incrementした)IDを$useridに入れる
+            $userid = $pdo->lastinsertid();
 
             header("Location: Welcome.php");  // メイン画面へ遷移
             exit();  // 処理終了
